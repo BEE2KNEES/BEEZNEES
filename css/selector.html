@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    /*
+    a:link{color:#000}
+    a:visited{color:cyan}
+    a:active{color:green}
+    a:hover{color:#ff0;}
+  #menu>ul>li:nth-child(even){border: 1px #f00 solid;}
+  */
+  a[href^="https://"]{color:red}
+  input[type="text"]{color:red}
+  /* [title="this is foam"]{color:magenta;} */
+.name:after{
+  content:" 고객님"
+}
+.name:before{
+  content:"환영합니다. "
+}
+  </style>
+<!--
++는 다음 것이랑 같이 선택할 때
+  ~는 다음 것 전부 다 선택
+   #는 id선택자, .은class선택자
+  모든 선택자:* 성능상 저하를 일으킬 수 있다
+   가상선택자 ':(명칭)'
+  속성 선택자 []
+   -->
+</head>
+
+<body>
+  <div id="menu">
+    <ul>
+      <li>menu item01
+        <ul>
+          <li><a href="https://www.naver.com/">Hello world</a></li>
+          <li class="sub on">menu item02</li>
+          <li>menu item03</li>
+          <li class="sub">menu item04</li>
+          <li class="sub">menu item05</li>
+        </ul>
+      </li>
+      <li id="target">
+        <input type="button" value="Hello world">
+      </li>
+      <li>
+        <input type="text" title="this is foam">
+      </li>
+      <li>
+        <input type="text" title="this is foam">
+      </li>
+      <li><span class="name">이만재</span></li>
+    </ul>
+  </div>
+</body>
+
+</html>
