@@ -1,8 +1,58 @@
-body{
+body {
     margin: 0;
 }
 
-.wrapper{
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* layou
+t*/
+.wrapper {
     background-color: #ffffff;
     border: red 1px solid;
+}
+
+.main section[class^="l-"] {
+    padding: 90px 0;
+    border: 1px red solid;
+}
+
+.main section[class^="l-"] > .inner {
+    width: 1170px;
+    margin: 0 auto;
+    border: 1px #f00 solid;
+}
+/*common*/
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading h2 {
+    border-bottom: #f00 1px solid;
+}
+
+.heading p {
+    font-size: 14px;
+}
+
+.heading p.red {
+    color: red;
+}
+
+.key_visual_group ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.key_visual_group ul li {
+    border: #f00 1px solid;
+    text-align: center;
+    width: 240px;
+}
+
+.key_visual_group .inner{
+    border: #f00 1px solid;
 }
