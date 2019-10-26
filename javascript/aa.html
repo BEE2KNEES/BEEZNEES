@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="en">
+<title>Insert title here</title>
+<script>
+    // 컴퓨터가 random으로 낼것이다.
+    var arr = [ "가위", "바위", "보" ];
+    // 게임의 총수
+    var total = 0;
+    // 게임 이긴 횟수
+    var win = 0;
+    // 게임 진 횟수
+    var lose = 0;
+    // 게임 비긴 횟수
+    var draw = 0;
+    window.addEventListener("load", function() {
+        var play = document.querySelector("#play");
+        // 버튼을 클릭하면 컴퓨터가 적읍을 해라.
+        play.addEventListener("click", function() {
+            // 0, 1, 2 를 출력하게 만든것이다.
+            var ran = Math.floor(Math.random() * 3);
+            // 0, 1, 2
+            var com = arr[ran];
+
+            // 확인 하기 위해서 콘솔창에 출력한다.
+            console.log(com);
+            var my = document.querySelector("#rps").value;
+            var output = document.querySelector("#output");
+            if ("" == my) {
+                alert("가위,바위,보 중 선택 하세요");
+            } else {
+                // 승,무,패 를 가려낸다.
+                // 게임 횟수 누적
+                total++;
+                // 결과물을 담을 임의의 변수
+                var result = "";
+                // 무 계산
+                if (my == com) {
+                    draw++;
+                    result = "비겼습니다.";
+                    // 승 계산
+                } else if ((my == "가위" && com == "보")
+                        || (my == "바위" && com == "가위")
+                        || (my == "보" && com == "바위")) {
+                    win++;
+                    result = "이겼습니다.";
+                    // 패 계산
+                } else if ((my == "가위" && com == "바위")
+                        || (my == "바위" && com == "보")
+                        || (my == "보" && com == "가위")) {
+                    result = "졌습니다.";
+                    lose++;
+                }
+                output.innerHTML += result + "\n" + total + "전" + win + "승"
+                        + draw + "무" + lose + "패 \n";
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <!-- 가위바위보 게임을 하겠다. -->
+    <!-- RockPaperScissors -->
+    <!-- User 선택 -->
+    <select id="rps">
+        <option value="">선택하시오</option>
+        <option value="가위">가위</option>
+        <option value="바위">바위</option>
+        <option value="보">보</option>
+    </select>
+    <!-- 버튼을 누르면 이겼다 졌다 라는 것을 보여줄것이다. O전 O승 O무 O패를 보여줄것이다.-->
+    <input id="play" type="button" value="play">
+    <br>
+    <!-- input tag 만 value를 사용한다 다음은 innerHTML 을 사용한다. -->
+    <textarea id="output" rows="5" cols="30"></textarea>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script>
+  //함수 function
+  //지역변수와 전역변수
+  //()에는 정보가 {}에는 실행될 내용이 들어간다.
+
+  /*네임드 함수- 이름으로 쉽게 부를 수 있다.
+  function message(){
+     console.log('함수 실행되고있니?')
+   }
+   message();*/
+
+  /*
+  리터럴 함수 - 결과값을 반환시킨다. 함수를 어떠한 값으로 바꿔준다.
+  function sum(x,y){
+  return x+y
+  }
+  var tNum = sum(30,30);
+  console.log(tNum)
+
+  var a = 0;
+  function sum(x,y){
+  a = x+y
+  }
+  sum(30,30)
+  var tNum =    a ;
+  console.log(tNum)
+
+  */
+
+  function sum(x, y) {
+    console.log(x+y)
+    return x + y
+  }
+
+  </script>
+</head>
+
+<body>
+  <button onclick="sum(10,20)">click</button>
+</body>
+
+</html>

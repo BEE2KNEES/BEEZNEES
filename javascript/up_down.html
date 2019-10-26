@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+
+  <script>
+    //랜덤 숫자를 생성한다
+    var ranNum = Math.floor(Math.random() * 50);
+
+    console.log(ranNum)
+    //게임 횟수에 대한 제한.
+    var count = 5;
+
+
+
+
+    //숫자를 입력할 수 있는 입력창을 만든다.
+
+    for (var i = 0; i < count; i++) {
+    var userNumber = prompt('숫자를 입력하세요')
+    if (ranNum < userNumber) {
+      alert('다운')
+    } else if (ranNum > userNumber) {
+      alert('업')
+    } else if (ranNum = userNumber) {
+      alert('정답')
+      break;
+    }
+    else {
+      alert
+        ('올바른 값을 입력하세요. 한번의 기회를 날려 버렸어요.')
+    }
+    }
+    //정답여부를 알려준다.
+  </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
